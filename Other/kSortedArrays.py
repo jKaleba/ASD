@@ -1,10 +1,17 @@
 from random import randint
 
-
 # k sorted arrays of the same size
 # N elements in entirety
 # sort it in O(Nlogk) complexity
 
+# (the only difference to sort arrays of
+# not the same size would be in heapSort,
+# where N should be updated continuously,
+# and instead of "f", current indexes should
+# be compared with size of current row)
+
+# (natural series merge would work properly
+# without further changes)
 
 def heapSort(T):
     # FUNCTIONS #
