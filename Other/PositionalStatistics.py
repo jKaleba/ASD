@@ -55,6 +55,7 @@ def pivot(A):
     return pivot(m)
 
 def magicPartition(A, p, r):
+#       FIXME
     idx = pivot(A)
     swap(A, idx, r)
     x = A[r]
@@ -70,7 +71,8 @@ def magicPartition(A, p, r):
 def magicFives(A, k):
     p, r = 0, len(A) - 1
     while p < r:
-        q = partition(A, p, r)
+        q = magicPartition(A, p, r)
+#       FIXME
         if q == k:
             return A[k]
         elif q > k:
