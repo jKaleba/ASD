@@ -20,7 +20,7 @@ def BFS(Graph: list[list[int]], s):
         for v in range(len(Graph[u])):
             x = Graph[u][v]
             if not visited[x]:
-                d[x] += 1
+                d[x] = d[u] + 1
                 parent[x] = u
                 visited[x] = True
                 Q.put(x)
