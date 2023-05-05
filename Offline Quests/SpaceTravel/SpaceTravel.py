@@ -101,6 +101,9 @@ def spacetravel(n, E, S, a, b):
     while not Q.empty():
         du, u = Q.get()
 
+        if u == b:
+            return distance[u]
+
         if du == distance[u]:
             for (v, l) in Graph[u]:
                 relax(u, v, l, distance, Q)
