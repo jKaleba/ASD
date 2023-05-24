@@ -96,7 +96,7 @@ def DFS_Matrix(Graph: list[list[bool]], s):
     return visited, parent, visitTime
 
 
-def listToMatrix(Graph: list[list[int]]):
+def listToMatrix(Graph: list[list[int]]) -> list[list[bool]]:
     n = len(Graph)
     G = [[False for _ in range(n)] for __ in range(n)]
 
