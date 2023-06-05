@@ -32,7 +32,7 @@ def updateWeights(Graph: list[list[tuple]], path):
                 break
 
 
-def findPath(Graph: list[list[int]], s, t):
+def findPath(Graph: list[list[tuple]], s, t):
     n = len(Graph)
 
     visited = [False for _ in range(n)]
