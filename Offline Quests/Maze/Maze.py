@@ -3,8 +3,8 @@
 # Algorytm polega na stworzeniu trzech funkcji,
 # f, g, r - oraz odpowiadających im tablic
 # F, G, R.
-# F - liczy kroki w górę
-# G - liczy kroki w dół
+# F - liczy kroki w dół
+# G - liczy kroki w górę
 # R - wybiera maximum spośród F i G
 
 # Zarówno funkcja F jak i G działa na zasadzie
