@@ -32,7 +32,7 @@ def updateWeights(Graph: list[list[tuple]], path):
                 break
 
 
-def findPath(Graph: list[list[int]], s, t):
+def findPath(Graph: list[list[tuple]], s, t):
     n = len(Graph)
 
     visited = [False for _ in range(n)]
@@ -68,11 +68,11 @@ def findPath(Graph: list[list[int]], s, t):
 def FordFulkerson(Graph, s, t):
     count = 0
 
-    adjacencyPath = findPath(Graph, s, t)
-    while adjacencyPath:
+    augmentingPath = findPath(Graph, s, t)
+    while augmentingPath:
         count += 1
-        updateWeights(Graph, adjacencyPath)
-        adjacencyPath = findPath(Graph, s, t)
+        updateWeights(Graph, augmentingPath)
+        augmentingPath = findPath(Graph, s, t)
 
     return count
 

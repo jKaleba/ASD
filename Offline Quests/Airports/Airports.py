@@ -31,8 +31,22 @@ def DijkstraForList(Graph: list[list[tuple[int, int]]], s, t):
 
     return distance
 
-
+# O(ElogV)
 def airports1(G: list[list[tuple]], A, s, t):
+    n = len(G)
+
+    G.append([])
+
+    for i in range(n):
+        G[n].append((i, A[i]))
+        G[i].append((n, A[i]))
+
+    distance = DijkstraForList(G, s, t)
+
+    return distance[t]
+
+# O(E^2)
+def airports2(G: list[list[tuple]], A, s, t):
     for u in range(len(A)):
         for v in range(len(A)):
             if u != v:
@@ -41,17 +55,6 @@ def airports1(G: list[list[tuple]], A, s, t):
     distance = DijkstraForList(G, s, t)
 
     return distance[t]
-
-
-# def airports2(G: list[list[tuple]], A, s, t):
-#     for u in range(len(A)):
-#         for v in range(len(A)):
-#             if u != v:
-#                 G[u].append((v, A[u] + A[v]))
-#
-#     distance = DijkstraForList(G, s, t)
-#
-#     return distance[t]
 
 
 # zmien all_tests na True zeby uruchomic wszystkie testy
