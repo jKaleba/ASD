@@ -49,14 +49,14 @@ def maze(L):
             if L[row][col] != '#' and F[row][col - 1] != -1:
                 F[row][col] = F[row][col - 1] + 1
             else:
-                # Furthest move impossible
+                # Further move impossible
                 break
 
         for row in range(n - 1, -1, -1):
             if L[row][col] != '#' and G[row][col - 1] != -1:
                 G[row][col] = G[row][col - 1] + 1
             else:
-                # Furthest move impossible
+                # Further move impossible
                 break
 
         # Edges
