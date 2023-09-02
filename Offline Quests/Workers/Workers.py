@@ -95,7 +95,7 @@ def binworker(M: list[list]):
 
         if len(Graph[n + i]):
             Graph[n + i].append((2 * n + 1, True))
-            Graph[2 * n + 1].append((n + 1, False))
+            Graph[2 * n + 1].append((n + i, False))
 
     return FordFulkerson(Graph, 2 * n, 2 * n + 1)
 
