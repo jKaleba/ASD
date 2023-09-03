@@ -3,6 +3,7 @@ from math import inf
 from egzP5btesty import runtests
 
 
+# O(nlogn)
 def transform(B):
     for idx in range(len(B)):
         x, y = B[idx]
@@ -28,6 +29,7 @@ def transform(B):
     return G
 
 
+# O(V + E) -> O(n + n) -> O(n)
 def DFS_List(Graph: list[list[int]], s):
     n = len(Graph)
 
@@ -80,8 +82,10 @@ def DFS_List(Graph: list[list[int]], s):
 
 
 def koleje(B):
+    # O(nlogn)
     G = transform(B)
 
+    # O(n)
     articulationPoints = DFS_List(G, 0)
 
     return sum(articulationPoints)
