@@ -27,7 +27,7 @@ def select_buildings(T, p):
     # Vector of original indices
     vector = [idx for (Object, idx) in T2]
 
-    # Filling first row <=> cost of 1st dorm < budget
+    # Filling first row <=> cost of 1st dorm <= budget
     for b in range(T[0][3], p + 1):
         F[0][b] = students(T, 0)
 
