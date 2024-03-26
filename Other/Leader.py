@@ -24,6 +24,7 @@ def leader(A):
             counter -= 1
         if counter < 0:
             currLead = A[i]
+            counter = 1
 
         i += 1
 
